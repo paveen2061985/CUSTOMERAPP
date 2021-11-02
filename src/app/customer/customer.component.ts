@@ -8,6 +8,9 @@ import { Customer } from '../model/Customer';
 export class CustomerComponent  {
 
   CustomerModel: Customer = new Customer();
-  
-
+  CustomerModels: Array<Customer> = new Array<Customer>();
+  addCustomer(){
+    this.CustomerModels.push(this.CustomerModel);
+    this.CustomerModel = new Customer();
+  }
 }
